@@ -14,7 +14,7 @@ void _fn_pchar(stack_t **stack, unsigned int line_number)
 		structGl.status = 1;
 		return;
 	}
-	if ((*stack)->n < 0 || (*stack)->n > 255)
+	if ((*stack)->n < 65 || (*stack)->n > 126)
 	{
 		fprintf(stderr, "L%d: can't pchar, value out of range\n", line_number);
 		structGl.status = 1;
